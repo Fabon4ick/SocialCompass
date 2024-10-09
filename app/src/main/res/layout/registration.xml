@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="550dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <RelativeLayout
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/logo_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="11dp"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:id="@+id/logo_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/logo_1"
+                android:text="СОЦИАЛЬНЫЙ"
+                android:textColor="#3E72AF"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/logo_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logo_2"
+                android:layout_toRightOf="@+id/logo_1"
+                android:text="КОМПАС"
+                android:textColor="#8DB1DD"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/registration_fields"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="РЕГИСТРАЦИЯ"
+                android:textColor="#3E72AF"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp" />
+
+            <EditText
+                android:id="@+id/nameEditText"
+                android:layout_width="320dp"
+                android:layout_height="55dp"
+                android:layout_below="@+id/title"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/edittext_background"
+                android:elevation="4dp"
+                android:hint="Имя"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="#000000"
+                android:textColorHint="#888888"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/surnameEditText"
+                android:layout_width="320dp"
+                android:layout_height="55dp"
+                android:layout_below="@+id/nameEditText"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/edittext_background"
+                android:elevation="4dp"
+                android:hint="Фамилия"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="#000000"
+                android:textColorHint="#888888"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/patronymicEditText"
+                android:layout_width="320dp"
+                android:layout_height="55dp"
+                android:layout_below="@+id/surnameEditText"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/edittext_background"
+                android:elevation="4dp"
+                android:hint="Отчество"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="#000000"
+                android:textColorHint="#888888"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/phoneNumberEditText"
+                android:layout_width="320dp"
+                android:layout_height="55dp"
+                android:layout_below="@+id/patronymicEditText"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/edittext_background"
+                android:elevation="4dp"
+                android:hint="Номер телефона"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="#000000"
+                android:textColorHint="#888888"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/registration_fields1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"
+                android:layout_below="@+id/phoneNumberEditText">
+
+                <EditText
+                    android:id="@+id/photoEditText"
+                    android:layout_width="320dp"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/edittext_background"
+                    android:elevation="4dp"
+                    android:hint="Загрузите ваше фото"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888"
+                    android:textSize="14sp"
+                    android:focusable="false"
+                    android:clickable="false" />
+
+                <TextView
+                    android:id="@+id/selectPhotoTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/photoEditText"
+                    android:layout_alignEnd="@+id/photoEditText"
+                    android:layout_alignBottom="@+id/photoEditText"
+                    android:gravity="center"
+                    android:elevation="5dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Выбрать"
+                    android:textColor="#3E72AF"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/birthdayEditText"
+                android:layout_width="320dp"
+                android:layout_height="55dp"
+                android:layout_below="@+id/registration_fields1"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/edittext_background"
+                android:elevation="4dp"
+                android:hint="Дата рождения"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="#000000"
+                android:textColorHint="#888888"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/passportSeriesEditText"
+                android:layout_width="320dp"
+                android:layout_height="55dp"
+                android:layout_below="@+id/birthdayEditText"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/edittext_background"
+                android:elevation="4dp"
+                android:hint="Серия паспорта"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="#000000"
+                android:textColorHint="#888888"
+                android:textSize="14sp"
+                android:maxLength="4"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/passportNumberEditText"
+                android:layout_width="320dp"
+                android:layout_height="55dp"
+                android:layout_below="@+id/passportSeriesEditText"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/edittext_background"
+                android:elevation="4dp"
+                android:hint="Номер паспорта"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="#000000"
+                android:textColorHint="#888888"
+                android:textSize="14sp"
+                android:maxLength="6"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/issuedByEditText"
+                android:layout_width="320dp"
+                android:layout_height="55dp"
+                android:layout_below="@+id/passportNumberEditText"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/edittext_background"
+                android:elevation="4dp"
+                android:hint="Кем выдан"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="#000000"
+                android:textColorHint="#888888"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/dateOfIssueEditText"
+                android:layout_width="320dp"
+                android:layout_height="55dp"
+                android:layout_below="@+id/issuedByEditText"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/edittext_background"
+                android:elevation="4dp"
+                android:hint="Дата выдачи"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="#000000"
+                android:textColorHint="#888888"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/departmentCodeEditText"
+                android:layout_width="320dp"
+                android:layout_height="55dp"
+                android:layout_below="@+id/dateOfIssueEditText"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="55dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/edittext_background"
+                android:elevation="4dp"
+                android:hint="Код подразделения"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="#000000"
+                android:textColorHint="#888888"
+                android:textSize="14sp"
+                android:maxLength="6"
+                android:inputType="number"/>
+
+            <Button
+                android:id="@+id/registr_btn"
+                android:layout_width="270dp"
+                android:layout_height="63dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_background"
+                android:onClick="register"
+                android:padding="10dp"
+                android:text="РЕГИСТРАЦИЯ"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:backgroundTint="@null"
+                android:layout_below="@+id/departmentCodeEditText"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
