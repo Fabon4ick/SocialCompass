@@ -39,7 +39,7 @@ public class Registration extends AppCompatActivity {
 
         // Настраиваем поля с ограничением по символам
         setupEditTextWithLimit(R.id.nameEditText, 80);
-        setupEditTextWithLimit(R.id.surnameEditText, 81);
+        setupEditTextWithLimit(R.id.surnameEditText, 80);
         setupEditTextWithLimit(R.id.patronymicEditText, 80);
         setupEditTextWithLimit(R.id.issuedByEditText, 80);
 
